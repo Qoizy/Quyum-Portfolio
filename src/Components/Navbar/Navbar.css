@@ -1,0 +1,145 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 10.625rem;
+}
+
+.navbar img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 30px;
+}
+
+.nav-menu.open {
+  right: 0;
+}
+
+.nav-connect {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu-close {
+  display: none;
+}
+
+.nav-menu-open {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-menu-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+    z-index: 3;
+  }
+
+  .nav-menu-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 230px;
+    width: 30px;
+    z-index: 3;
+  }
+
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1f0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s;
+    right: -350px;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav-menu li img {
+    display: flex;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-menu li:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .navbar {
+    margin: 1rem 5rem;
+  }
+
+  .navbar img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+
+  .nav-menu {
+    gap: 40px;
+    font-size: 25px;
+  }
+
+  .nav-connect {
+    padding: 1rem 1rem;
+  }
+} */
