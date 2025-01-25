@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img src="assets/q-logo.png" alt="Q" className="nav-logo" />
+      <img src="/assets/q-logo.png" alt="Q" className="nav-logo" />
       {!menuOpen && (
         <img
           src="assets/burger.png"
