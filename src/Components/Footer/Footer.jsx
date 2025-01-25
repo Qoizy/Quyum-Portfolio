@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import qlogo from "../../images/qlogo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="assets/q-logo.png" alt="" />
+          <img src={qlogo} alt="" />
         </div>
 
         <div className="footer-section">

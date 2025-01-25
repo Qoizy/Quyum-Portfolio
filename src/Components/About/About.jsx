@@ -1,16 +1,18 @@
 import React from "react";
 import "./About.css";
+import img3 from "../../images/img3.png";
+import profile from "../../images/profile.jpeg";
 
 const About = () => {
   return (
     <div id="about" className="about">
       <div className="about-title">
         <h1>About Me</h1>
-        <img src="assets/img3.png" alt="About Me" />
+        <img src={img3} alt="About Me" />
       </div>
       <div className="about-section">
         <div className="about-left">
-          <img src="assets/profile.jpeg" alt="About Me" />
+          <img src={profile} alt="About Me" />
         </div>
         <div className="about-right">
           <div className="about-para">

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css";
+import img3 from "../../images/img3.png";
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -39,7 +40,7 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="contact-title">
         <h1>Get in touch</h1>
-        <img src="assets/img3.png" alt="contact" />
+        <img src={img3} alt="contact" />
       </div>
       <div className="contact-section">
         <div className="contact-left">
@@ -47,14 +48,15 @@ const Contact = () => {
           <p>I'm currently available to take on any project.</p>
           <div className="contact-details">
             <div className="contact-detail">
-              <img src="assets/email.png" alt="email" />
+              <img src="../../images/email.png" alt="email" />
               <p>oladimejiquyum30@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <img src="assets/call.png" alt="call" /> <p>+234 905 707 2013</p>
+              <img src="../../images/call.png" alt="call" />{" "}
+              <p>+234 905 707 2013</p>
             </div>
             <div className="contact-detail">
-              <img src="assets/location.png" alt="location" />
+              <img src="../../images/location.png" alt="location" />
               <p>Lagos, Nigeria</p>
             </div>
           </div>

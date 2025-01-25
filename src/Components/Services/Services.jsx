@@ -1,13 +1,15 @@
 import React from "react";
 import "./Services.css";
-import services_Data from "../../../assets/services-data";
+import services_Data from "../../images/services-data";
+import img3 from "../../images/img3.png";
+import arrow2 from "../../images/arrow2.png";
 
 const Services = () => {
   return (
     <div id="services" className="services">
       <div className="services-title">
         <h1>My Services</h1>
-        <img src="assets/img3.png" alt="" />
+        <img src={img3} alt="" />
       </div>
       <div className="services-container">
         {services_Data.map((service, index) => {
@@ -24,7 +26,7 @@ const Services = () => {
                   className="readmore-link"
                 >
                   <p>Read More</p>
-                  <img src="/assets/arrow2.png" alt="arrow" />
+                  <img src={arrow2} alt="arrow" />
                 </a>
               </div>
             </div>

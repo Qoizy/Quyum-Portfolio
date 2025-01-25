@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import profile from "../../images/profile.jpeg";
 
 const AnimatedText = ({ text }) => {
   const wordAnimation = {
@@ -38,7 +39,7 @@ const AnimatedText = ({ text }) => {
 const Hero = () => {
   return (
     <div id="home" className="hero">
-      <img src="assets/profile.jpeg" alt="image" />
+      <img src={profile} alt="image" />
       <motion.h1>
         <span>I'm Quyum Oladimeji,</span>{" "}
         <AnimatedText text="A Frontend Engineer" />
@@ -79,7 +80,7 @@ const Hero = () => {
         </div>
         <div className="hero-resume">
           <a
-            href="assets/Quyum-Resume.pdf"
+            href="../../images/Quyum-Resume.pdf"
             download="Quyum_oladimeji_Resume.pdf"
             className="anchor-link"
           >
