@@ -24,7 +24,7 @@ const Services = () => {
                   className="readmore-link"
                 >
                   <p>Read More</p>
-                  <img src={arrow} alt="arrow" />
+                  <img src="/assets/arrow2.png" alt="arrow" />
                 </a>
               </div>
             </div>
