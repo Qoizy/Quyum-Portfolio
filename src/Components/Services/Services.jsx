@@ -25,8 +25,8 @@ const Services = () => {
                   rel="noopener noreferrer"
                   className="readmore-link"
                 >
-                  <p>Read More</p>
-                  <img src={arrow2} alt="arrow" />
+                  <p>Read More</p> &rarr;
+                  {/* <img src={arrow2} alt="arrow" /> */}
                 </a>
               </div>
             </div>

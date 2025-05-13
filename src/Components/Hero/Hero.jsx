@@ -1,77 +1,42 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 import "./Hero.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profile from "../../images/profile.jpeg";
-
-const AnimatedText = ({ text }) => {
-  const wordAnimation = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  return (
-    <motion.div
-      style={{ display: "inline-block" }}
-      initial="hidden"
-      animate="visible"
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      }}
-    >
-      {text.split(" ").map((word, index) => (
-        <motion.span
-          key={index}
-          variants={wordAnimation}
-          style={{ display: "inline-block", marginRight: "5px" }}
-        >
-          {word}
-        </motion.span>
-      ))}
-    </motion.div>
-  );
-};
 
 const Hero = () => {
   return (
     <div id="home" className="hero">
       <img src={profile} alt="image" />
-      <motion.h1>
-        <span>I'm Quyum Oladimeji,</span>{" "}
-        <AnimatedText text="A Frontend Engineer" />
-      </motion.h1>
-      <p>
-        I am a Frontend developer with 3 years experience working across various
-        project.
-      </p>
-      {/* <motion.h1
-        animate={{ y: [0, -20, 0] }}
-        transition={{
-          duration: 0.6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <span>I'm Quyum Oladimeji,</span> A Frontend Engineer
-      </motion.h1>
-      <motion.p
-        animate={{
-          x: [0, 100, 0],
-          opacity: [1, 0.5, 1],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        I am a Frontend developer with 3 years experience working across various
-        project.
-      </motion.p> */}
+      <h3>
+        Hi, <span>I'm Quyum Oladimeji</span>
+      </h3>
+      <div>
+        <h1>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Welcome to My Portfolio")
+                .pauseFor(1000)
+                .deleteAll()
+                // .typeString("My name is Quyum Oladimeji")
+                // .pauseFor(1000)
+                // .deleteAll()
+                .typeString("I Build Amazing Web Application")
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString("Let’s Create Something Great!")
+                .start();
+            }}
+            options={{
+              loop: true,
+              delay: 75,
+              cursor: "|",
+            }}
+          />
+        </h1>
+      </div>
       <div className="hero-action">
         <div className="hero-connect">
           <AnchorLink className="anchor-link" offset={50} href="#contact">

@@ -17,20 +17,23 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              I am a Junior Frontend Engineer with 2 years experience and
-              specialize in developing an appealing User-Interface and Dynamic
-              Web App.
+              I am a Frontend Engineer with years of experience and specialize
+              in developing appealing User-Interface and Dynamic Web App.
             </p>
             <p>
-              With knowledge in language and frameworks like JavaScript, React
-              Js, Vue Js, TailWind CSS, HTML and CSS.
+              Works with languages and frameworks like JavaScript, React Js, Vue
+              Js, TypeScript, TailWind.
             </p>
           </div>
           <div className="about-skills">
             <div className="about-skill">
-              <p>HTML & CSS</p>
+              <p>TypeScript</p>
               <hr style={{ width: "65%" }} />
             </div>
+            {/* <div className="about-skill">
+              <p>Next & Nuxt</p>
+              <hr style={{ width: "60%" }} />
+            </div> */}
             <div className="about-skill">
               <p>TailWind CSS</p>
               <hr style={{ width: "45%" }} />
@@ -49,7 +52,7 @@ const About = () => {
             </div>
             <div className="about-achievements">
               <div className="about-achievement">
-                <h1>3+</h1>
+                <h1>2+</h1>
                 <p>YEARS OF EXPERIENCE</p>
               </div>
               <hr />
@@ -59,7 +62,7 @@ const About = () => {
               </div>
               <hr />
               <div className="about-achievement">
-                <h1>3</h1>
+                <h1>2+</h1>
                 <p>HAPPY CLIENT</p>
               </div>
             </div>
