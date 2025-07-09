@@ -1,13 +1,26 @@
 import project1_img from "../images/project1.png";
 import project2_img from "../images/project2.png";
 import project3_img from "../images/project3.png";
-import project4_img from "../images/project4.png";
-import project5_img from "../images/project5.png";
-import project6_img from "../images/project6.png";
 
 const mywork_data = [
   {
     w_no: "01",
+    w_name: "GigLink Africa",
+    w_img: project3_img,
+    w_link: "https://www.giglink.africa/",
+    w_githubLink: "https://github.com/Giglinkhq/Giglink_web_app",
+    w_description:
+      "An Freelance platform where we connect Africa top creative talents with businesses in need.",
+    w_technologies: ["React", "JavaScript", "TailWindcss", "Axios", "API"],
+    w_features: [
+      "A dashboard for both client and talent to manage their activities",
+      "Verified profile to get the best of the platform",
+      "Client search for talent that matches their job description and hire",
+      "Make payment into an escrow account and get cleared after submitted work is verified",
+    ],
+  },
+  {
+    w_no: "02",
     w_name: "Todo Application",
     w_img: project1_img,
     w_link: "https://todo-app-ten-zeta-86.vercel.app/",
@@ -24,7 +37,7 @@ const mywork_data = [
     ],
   },
   {
-    w_no: "02",
+    w_no: "03",
     w_name: "Altschool Assignment",
     w_img: project2_img,
     w_link: "https://assign-2-roan.vercel.app/",
@@ -40,18 +53,9 @@ const mywork_data = [
     ],
   },
   {
-    w_no: "03",
-    w_name: "Graphics design",
-    w_img: project3_img,
-    w_link: "",
-    w_description: "",
-    w_technologies: "",
-    w_features: "",
-  },
-  {
     w_no: "04",
-    w_name: "SEO",
-    w_img: project4_img,
+    w_name: "",
+    w_img: "",
     w_link: "",
     w_description: "",
     w_technologies: "",
@@ -59,8 +63,8 @@ const mywork_data = [
   },
   {
     w_no: "05",
-    w_name: "Technical Writing",
-    w_img: project5_img,
+    w_name: "",
+    w_img: "",
     w_link: "",
     w_description: "",
     w_technologies: "",
@@ -68,8 +72,17 @@ const mywork_data = [
   },
   {
     w_no: "06",
-    w_name: "Writing",
-    w_img: project6_img,
+    w_name: "",
+    w_img: "",
+    w_link: "",
+    w_description: "",
+    w_technologies: "",
+    w_features: "",
+  },
+  {
+    w_no: "07",
+    w_name: "",
+    w_img: "",
     w_link: "",
     w_description: "",
     w_technologies: "",

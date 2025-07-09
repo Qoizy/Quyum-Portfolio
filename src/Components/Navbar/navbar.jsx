@@ -1,121 +1,109 @@
-import React, { useState } from "react";
-import "./Navbar.css";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import qlogo from "../../images/qlogo.png";
-import img3 from "../../images/img3.png";
-import burger from "../../images/burger.png";
-import burgerclose from "../../images/burgerclose.png";
+    import React, { useState, useEffect } from "react";
+    import "./Navbar.css";
+    import AnchorLink from "react-anchor-link-smooth-scroll";
+    import qlogo from "../../images/qlogo.png";
+    import img3 from "../../images/img3.png";
+    import { useGSAP } from "@gsap/react";
+    import { gsap } from "gsap/all";
 
-const Navbar = () => {
-  const [menu, setMenu] = useState("home");
-  const [menuOpen, setMenuOpen] = useState(false);
+    const Navbar = () => {
+    const [menu, setMenu] = useState("home");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openMenu = () => {
-    setMenuOpen(true);
-    document.querySelector(".nav-menu-close")?.focus();
-  };
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-    document.querySelector(".nav-menu-open")?.focus();
-  };
+    const handleMenuItemClick = (menuItem) => {
+        setMenu(menuItem);
+        setIsMenuOpen(false);
+    };
 
-  // const menuRef = useRef();
+    useEffect(() => {
+        const handleEscape = (e) => {
+        if (e.key === "Escape" && isMenuOpen) {
+            setIsMenuOpen(false);
+        }
+        };
 
-  // const openMenu = () => {
-  //   menuRef.current.style.right = "0";
-  // };
+        document.addEventListener("keydown", handleEscape);
+        return () => document.removeEventListener("keydown", handleEscape);
+    }, [isMenuOpen]);
 
-  // const closeMenu = () => {
-  //   menuRef.current.style.right = "-350";
-  // };
+    useGSAP(() => {
+        gsap
+        .timeline({
+            scrollTrigger: {
+            trigger: "nav",
+            start: "bottom top",
+            },
+        })
+        .fromTo(
+            "nav",
+            { backgroundColor: "transparent" },
+            {
+            backgroundColor: "#00000050",
+            backdropFilter: "blur(10px)",
+            duration: 1,
+            ease: "power1.inOut",
+            }
+        );
+    });
 
-  return (
-    <nav aria-label className="navbar">
-      <img src={qlogo} alt="Q" className="nav-logo" />
-      {!menuOpen && (
-        <img
-          src={burger}
-          onClick={openMenu}
-          onKeyDown={(e) => e.key === "Enter" && openMenu()}
-          alt="menu"
-          className="nav-menu-open"
-          tabIndex={0}
-          role="button"
-          aria-label="Open menu"
-        />
-      )}
-      <ul className={`nav-menu ${menuOpen ? "open" : ""}`} role="menubar">
-        {menuOpen && (
-          <img
-            src={burgerclose}
-            onClick={closeMenu}
-            onKeyDown={(e) => e.key === "Enter" && closeMenu()}
-            alt="close"
-            className="nav-menu-close"
-            tabIndex={0}
-            role="button"
-            aria-label="Close menu"
-          />
-        )}
-        <li role="none">
-          <AnchorLink className="anchor-link" href="#home" role="menuitem">
-            <p onClick={() => setMenu("home")}>Home</p>
-          </AnchorLink>
-          {menu === "home" ? <img src={img3} alt="" /> : <></>}
-        </li>
-        <li role="none">
-          <AnchorLink
-            className="anchor-link"
-            offset={50}
-            href="#about"
-            role="menuitem"
-          >
-            <p onClick={() => setMenu("about")}>About Me</p>
-          </AnchorLink>
-          {menu === "about" ? <img src={img3} alt="" /> : <></>}
-        </li>
-        <li role="none">
-          <AnchorLink
-            className="anchor-link"
-            offset={50}
-            href="#services"
-            role="menuitem"
-          >
-            <p onClick={() => setMenu("services")}>Services</p>
-          </AnchorLink>
-          {menu === "services" ? <img src={img3} alt="" /> : <></>}
-        </li>
-        <li role="none">
-          <AnchorLink
-            className="anchor-link"
-            offset={50}
-            href="#work"
-            role="menuitem"
-          >
-            <p onClick={() => setMenu("work")}>Portfolio</p>
-          </AnchorLink>
-          {menu === "work" ? <img src={img3} alt="" /> : <></>}
-        </li>
-        <li role="none">
-          <AnchorLink
-            className="anchor-link"
-            offset={50}
-            href="#contact"
-            role="menuitem"
-          >
-            <p onClick={() => setMenu("contact")}>Contact</p>
-          </AnchorLink>
-          {menu === "contact" ? <img src={img3} alt="" /> : <></>}
-        </li>
-      </ul>
-      {/* <div className="nav-connect">
-        <AnchorLink className="anchor-link" offset={50} href="#contact">
-          Connect With Me
-        </AnchorLink>
-      </div> */}
-    </nav>
-  );
-};
+    return (
+        <nav className="navbar" aria-label="Main navigation">
+        <img src={qlogo} alt="Q logo" className="nav-logo" />
 
-export default Navbar;
+        {/* Hamburger Menu */}
+        <div className="hamburger">
+            <input
+            type="checkbox"
+            id="hamburger-input"
+            checked={isMenuOpen}
+            onChange={toggleMenu}
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle menu"
+            className="hamburger-checkbox"
+            />
+            <label htmlFor="hamburger-input" className="hamburger-label">
+            <span className="hamburger-line line1"></span>
+            <span className="hamburger-line line2"></span>
+            <span className="hamburger-line line3"></span>
+            </label>
+        </div>
+
+        <ul
+            className={`nav-menu ${isMenuOpen ? "open" : ""}`}
+            role="menubar"
+            aria-hidden={!isMenuOpen}
+        >
+            {["home", "about", "services", "work", "contact"].map((item) => (
+            <li key={item} role="none">
+                <AnchorLink
+                className="anchor-link"
+                offset={item === "home" ? 0 : 50}
+                href={`#${item}`}
+                role="menuitem"
+                onClick={() => handleMenuItemClick(item)}
+                >
+                <p>
+                    {item === "home"
+                    ? "Home"
+                    : item === "about"
+                    ? "About Me"
+                    : item === "services"
+                    ? "Services"
+                    : item === "work"
+                    ? "Portfolio"
+                    : "Contact"}
+                </p>
+                {/* {menu === item && <img src={img3} alt="" aria-hidden="true" />} */}
+                </AnchorLink>
+            </li>
+            ))}
+        </ul>
+        </nav>
+    );
+    };
+
+    export default Navbar;

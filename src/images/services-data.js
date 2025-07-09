@@ -24,6 +24,13 @@ const services_Data = [
     s_desc: "Writing persuasive text to encourage people to take action",
     s_link: "https://en.wikipedia.org/wiki/Copywriting",
   },
+  {
+    s_no: "05",
+    s_name: "UI/UX",
+    s_desc: "Bringing ideas to life with design",
+    s_link:
+      "https://en.wikipedia.org/wiki/User_interface_design#:~:text=On%20the%20other%20hand%2C%20the,important%20part%20of%20the%20design.",
+  },
 ];
 
 export default services_Data;

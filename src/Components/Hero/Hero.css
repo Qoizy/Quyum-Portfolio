@@ -5,10 +5,24 @@
   gap: 35px;
 }
 
-.hero img {
+.left-leaf {
+  position: absolute;
+  left: 0;
+  /* width: ; */
+  bottom: -5rem;
+}
+
+.right-leaf {
+  position: absolute;
+  right: 0;
+  /* width: 6rem; */
+  top: 30%;
+}
+
+.profile-image {
   margin-top: 150px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #94a3b8;
   width: 10%;
 }
 
@@ -18,7 +32,7 @@
 }
 
 .hero h1 {
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  background: linear-gradient(270deg, #3b82f6 40.56%, #ffffff 60.74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,28 +45,30 @@
   width: 70%;
   font-size: 3rem;
   font-weight: 600;
+  color: #3b82f6;
 }
 
-.hero h3 span {
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+/* .hero h3 span {
+  background: linear-gradient(270deg, #3b82f6 40.56%, #ffffff 60.74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .hero-action {
   display: flex;
   align-items: center;
   gap: 25px;
   font-size: 24px;
-  font-weight: 500px;
+  font-weight: bolder;
   margin-bottom: 50px;
 }
 
 .hero-connect {
   padding: 1.5625rem 1.5625rem;
   border-radius: 50px;
-  background: linear-gradient(264deg, #02c3bd -5.09%, #bccce0 106.28%);
+  border: 1px solid #3b82f6;
+  /* background: linear-gradient(264deg, #ffffff -5.09%, #3b82f6 106.28%); */
   cursor: pointer;
 }
 
@@ -68,7 +84,9 @@
 }
 
 .hero-resume:hover {
-  background: #02c3bd;
+  border: 1px solid #3b82f6;
+
+  /* background: #02c3bd; */
 }
 
 @media (max-width: 1200px) {
@@ -82,7 +100,7 @@
 }
 
 @media (max-width: 992px) {
-  .hero img {
+  .profile-image {
     width: 25%;
   }
 
@@ -102,7 +120,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero img {
+  .profile-image {
     width: 20%;
     margin-top: 100px;
   }
@@ -119,10 +137,15 @@
   .hero-action {
     font-size: 1.7rem;
   }
+
+  .left-leaf,
+  .right-leaf {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
-  .hero img {
+  .profile-image {
     width: 25%;
     margin-top: 80px;
   }
@@ -145,10 +168,15 @@
   .hero-resume {
     padding: 1rem 2rem;
   }
+
+  .left-leaf,
+  .right-leaf {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
-  .hero img {
+  .profile-image {
     width: 30%;
     margin-top: 60px;
   }
@@ -169,6 +197,11 @@
   .hero-connect,
   .hero-resume {
     padding: 0.75rem 1.5rem;
+  }
+
+  .left-leaf,
+  .right-leaf {
+    display: none;
   }
 }
 

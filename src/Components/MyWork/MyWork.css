@@ -15,6 +15,7 @@
   padding: 0px 30px;
   font-size: 3rem;
   font-weight: 600;
+  color: #3b82f6;
 }
 
 .mywork-title img {
@@ -26,12 +27,12 @@
 
 .mywork-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
 .mywork-project {
-  border: 1px solid #ccc;
+  border: 1px solid #3b82f6;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -83,8 +84,8 @@
 
 .details-button {
   padding: 10px 20px;
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
-  color: #fff;
+  /* background: linear-gradient(270deg, #94a3b8 40.56%, #ffffff 60.74%); */
+  color: #333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -93,7 +94,7 @@
 }
 
 .details-button:hover {
-  background-color: #bccce0;
+  background-color: #94a3b8;
 }
 
 .mywork-buttons {
@@ -105,10 +106,12 @@
   display: inline-flex;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
-  color: #fff;
+  /* background: linear-gradient(270deg, #94a3b8 40.56%, #ffffff 60.74%); */
+  /* background: linear-gradient(270deg, #0f172a 20%, #1e293b 80%); */
+
+  color: #3b82f6;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: background-color 0.3s ease;

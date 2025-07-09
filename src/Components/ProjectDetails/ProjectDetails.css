@@ -5,13 +5,15 @@
   width: 800px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  background-color: #333;
+  background-color: #3b82f6;
 }
 
 .back-button {
   padding: 10px 20px;
   /* background: linear-gradient(270deg, #df8908 50.41%, #b414ff 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  background-color: #94a3b8;
+
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -21,8 +23,10 @@
 }
 
 .back-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
+  /* background-color: #ffffff; */
+  border: 2px solid #94a3b8;
+
+  /* transform: scale(1.1); */
 }
 
 .actions {
@@ -34,7 +38,9 @@
 .action-button {
   padding: 10px 20px;
   /* background: linear-gradient(200deg, #b414ff 50.41%, #df8908 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  background-color: #94a3b8;
+
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -46,7 +52,8 @@
 }
 
 .action-button:hover {
-  background-color: #218838;
+  /* background-color: #218838; */
+  border: 2px solid #94a3b8;
 }
 
 .typewriter-container {
@@ -61,7 +68,9 @@
 
 .project-name {
   /* background: linear-gradient(190deg, #df8908 50.41%, #b414ff 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  background-color: #94a3b8;
+
   color: #fff;
   font-size: 2.5rem;
   text-align: center;
@@ -69,7 +78,9 @@
 
 .project-description {
   /* background: linear-gradient(270deg, #df8908 50.41%, #b414ff 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  background-color: #94a3b8;
+
   color: #fff;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -90,7 +101,8 @@
 
 .technology {
   /* background: linear-gradient(270deg, #df8908 50.41%, #b414ff 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  background-color: #94a3b8;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -105,7 +117,9 @@
 
 .key-features li {
   /* background: linear-gradient(270deg, #df8908 50.41%, #b414ff 90.25%); */
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
+  /* background: linear-gradient(270deg, #94a3b8 40.56%, #ffffff 60.74%); */
+  background-color: #94a3b8;
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;

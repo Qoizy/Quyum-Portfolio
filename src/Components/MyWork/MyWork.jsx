@@ -25,7 +25,7 @@ const MyWork = () => {
     <div id="work" className="mywork">
       <div className="mywork-title">
         <h1>My Latest Work</h1>
-        <img src={img3} alt="" />
+        {/* <img src={img3} alt="" /> */}
       </div>
       <div className="mywork-container">
         {mywork_data.slice(0, visibleproject).map((work, index) => {
@@ -56,14 +56,14 @@ const MyWork = () => {
           <button onClick={loadMoreProject} className="show-more">
             Show More
             {/* <span className="tooltip-text">View More Project</span> */}
-            &darr;
+            {/* &darr; */}
             {/* <img src={arrow2} alt="Show More" /> */}
           </button>
         ) : (
           <button onClick={showLessProject} className="show-less">
             Show Less
             {/* <span className="tooltip-text">View Fewer Project</span> */}
-            &uarr;
+            {/* &uarr; */}
             {/* <img src={arrow2} alt="Show More" /> */}
           </button>
         )}

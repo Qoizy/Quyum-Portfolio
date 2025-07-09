@@ -1,8 +1,10 @@
 .footer {
-  color: white;
+  color: #ffffff;
   padding: 3rem 1rem;
   margin-top: auto;
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  background: #00000050;
+
+  /* background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%); */
 }
 
 .footer-content {
@@ -35,11 +37,11 @@
   left: 0;
   width: 50px;
   height: 2px;
-  background: linear-gradient(270deg, #02c3bd 40.56%, #bccce0 60.74%);
+  background: linear-gradient(270deg, #3b82f6 40.56%, #ffffff 60.74%);
 }
 
 .footer-section p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   line-height: 1.6;
   font-size: 1.2rem;
 }
@@ -100,11 +102,11 @@
   margin-top: 2rem;
   padding-top: 1rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   font-size: 1.3rem;
   margin: 0;
 }

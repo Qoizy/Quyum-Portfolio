@@ -9,7 +9,7 @@ const Services = () => {
     <div id="services" className="services">
       <div className="services-title">
         <h1>My Services</h1>
-        <img src={img3} alt="" />
+        {/* <img src={img3} alt="" /> */}
       </div>
       <div className="services-container">
         {services_Data.map((service, index) => {
