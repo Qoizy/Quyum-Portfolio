@@ -1,6 +1,10 @@
 import project1_img from "../images/project1.png";
 import project2_img from "../images/project2.png";
 import project3_img from "../images/project3.png";
+import project4_img from "../images/project4.png";
+import project5_img from "../images/project5.png";
+import project6_img from "../images/project6.png";
+import project7_img from "../images/project7.png";
 
 const mywork_data = [
   {
@@ -38,54 +42,55 @@ const mywork_data = [
   },
   {
     w_no: "03",
-    w_name: "Altschool Assignment",
-    w_img: project2_img,
-    w_link: "https://assign-2-roan.vercel.app/",
-    w_githubLink: "https://github.com/Qoizy/assignment-2",
+    w_name: "Happy Pet",
+    w_img: project5_img,
+    w_link: "https://happy-pet-lime.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/happy-pet",
     w_description:
-      "These Assignment was done in First Semester. As a newbie at Altschool, I get my hands on all types of project so as to have a great basic knowledge and be prepared for the outer world.",
-    w_technologies: ["JavaScript", "HTML", "CSS"],
-    w_features: [
-      "A static page for URL shortening.",
-      "Series of pages with forms fordifferent uses.",
-      "How to work with text on cards with different designs.",
-      "Some are mobile responsive.",
-    ],
+      "A Landing Page that's all about taking care of pet and all.",
+    w_technologies: ["React", "JavaScript", "TailWindCSS", "Framer"],
+    w_features: "",
   },
   {
     w_no: "04",
-    w_name: "",
-    w_img: "",
-    w_link: "",
-    w_description: "",
-    w_technologies: "",
-    w_features: "",
+    w_name: "ValueRide",
+    w_img: project4_img,
+    w_link: "https://valueride.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/ValueRide",
+    w_description:
+      "A Transport and Logistics Platform where user connect with trusted bus owner and find their perfect transportation solution. Also a dashboard where bus owner can track their earning and fleet movement and user can track their activities based on their travel history.",
+    w_technologies: ["React", "JavaScript", "HTML", "CSS", "API", "Axios"],
+    w_features: [],
   },
   {
     w_no: "05",
-    w_name: "",
-    w_img: "",
-    w_link: "",
-    w_description: "",
-    w_technologies: "",
-    w_features: "",
+    w_name: "Cafeu",
+    w_img: project2_img,
+    w_link: "https://cafeu-amber.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/cafeu",
+    w_description: "A CAFE landing page.",
+    w_technologies: ["React", "JavaScript", "TailWindCSS"],
+    w_features: [],
   },
   {
     w_no: "06",
-    w_name: "",
-    w_img: "",
-    w_link: "",
-    w_description: "",
-    w_technologies: "",
+    w_name: "Compatto",
+    w_img: project6_img,
+    w_link: "https://compatto-seven.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/compatto",
+    w_description:
+      "A landing page that shows how to brings simplicity into the furnishing market.",
+    w_technologies: ["React", "JavaScript", "TailWindCSS"],
     w_features: "",
   },
   {
     w_no: "07",
-    w_name: "",
-    w_img: "",
-    w_link: "",
-    w_description: "",
-    w_technologies: "",
+    w_name: "Halsa",
+    w_img: project7_img,
+    w_link: "https://halsa-ashen.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/halsa",
+    w_description: "Your Health Center all in one app.",
+    w_technologies: ["React", "JavaScript", "TailWindCSS"],
     w_features: "",
   },
 ];

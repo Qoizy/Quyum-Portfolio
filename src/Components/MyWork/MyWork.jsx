@@ -6,15 +6,15 @@ import img3 from "../../images/img3.png";
 import arrow2 from "../../images/arrow2.png";
 
 const MyWork = () => {
-  const [visibleproject, setVisibleProject] = useState(3);
+  const [visibleproject, setVisibleProject] = useState(2);
   const navigate = useNavigate();
 
   const loadMoreProject = () => {
-    setVisibleProject((prev) => prev + 3);
+    setVisibleProject((prev) => prev + 2);
   };
 
   const showLessProject = () => {
-    setVisibleProject(3);
+    setVisibleProject(2);
   };
 
   const openProjectDetails = (project) => {

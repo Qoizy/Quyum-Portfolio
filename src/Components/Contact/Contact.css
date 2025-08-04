@@ -95,7 +95,7 @@
 
 .contact-right input {
   border: none;
-  width: 700px;
+  width: 730px;
   height: 78px;
   padding-left: 20px;
   border-radius: 4px;
@@ -106,7 +106,7 @@
 }
 
 .contact-right textarea {
-  width: 650px;
+  width: 700px;
   border: none;
   padding: 25px;
   border-radius: 4px;
@@ -178,7 +178,7 @@
   .contact-details {
     font-size: 2.5rem;
   }
-  
+
   .contact-right {
     align-items: start;
   }
@@ -189,13 +189,13 @@
 
   .contact-right input {
     height: 70px;
-    width: 100%;
+    width: 95%;
     font-size: 2rem;
   }
 
   .contact-right textarea {
     font-size: 2rem;
-    width: 95%;
+    width: 91%;
   }
 
   .contact-submit {
@@ -248,7 +248,7 @@
 
   .contact-right input {
     height: 70px;
-    width: 90%;
+    width: 95%;
     font-size: 2rem;
   }
 
@@ -306,13 +306,13 @@
 
   .contact-right input {
     height: 50px;
-    width: 95%;
+    width: 93%;
     font-size: 1.5rem;
   }
 
   .contact-right textarea {
     font-size: 1.5rem;
-    width: 90%;
+    width: 85%;
   }
 
   .contact-submit {
@@ -364,7 +364,7 @@
 
   .contact-right input {
     height: 40px;
-    width: 80%;
+    width: 88%;
     font-size: 1rem;
   }
 

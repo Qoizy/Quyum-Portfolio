@@ -67,12 +67,12 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              I am a Frontend Engineer with years of experience and specialize
-              in developing appealing User-Interface and Dynamic Web App.
-            </p>
-            <p>
-              Works with languages and frameworks like JavaScript, React Js, Vue
-              Js, TypeScript, TailWind.
+              Results-driven Frontend Engineer skilled in building responsive,
+              accessible, and high-performance web apps using React, Next.js,
+              and modern JavaScript. Proven ability to turn complex UI designs
+              into intuitive user experiences that improve engagement and
+              retention. Thrives in fast-paced Agile teams, delivering clean,
+              scalable code that drives real business impact.
             </p>
           </div>
           <div className="about-skills">
