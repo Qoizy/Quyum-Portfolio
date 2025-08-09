@@ -1,39 +1,49 @@
 import React from "react";
-import "./Services.css";
 import services_Data from "../../images/services-data";
-import img3 from "../../images/img3.png";
-import arrow2 from "../../images/arrow2.png";
 
 const Services = () => {
   return (
-    <div id="services" className="services">
-      <div className="services-title">
-        <h1>My Services</h1>
-        {/* <img src={img3} alt="" /> */}
+    <section
+      id="services"
+      className="flex flex-col items-center justify-center gap-10 py-20 px-4 md:px-10"
+      data-aos="zoom-in-left"
+      data-aos-delay="300"
+    >
+      <div className="relative">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">
+          My Services
+        </h1>
       </div>
-      <div className="services-container">
-        {services_Data.map((service, index) => {
-          return (
-            <div key={index} className="services-format">
-              <h3>{service.s_no}</h3>
-              <h2>{service.s_name}</h2>
-              <p>{service.s_desc}</p>
-              <div className="services-readmore">
-                <a
-                  href={service.s_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="readmore-link"
-                >
-                  <p>Read More</p> &rarr;
-                  {/* <img src={arrow2} alt="arrow" /> */}
-                </a>
-              </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl">
+        {services_Data.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-4 border border-blue-500 rounded-2xl p-8 hover:scale-105 transition-transform duration-300"
+          >
+            <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+              {service.s_no}
+            </h3>
+            <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+              {service.s_name}
+            </h2>
+            <p className="text-sm md:text-base text-white leading-relaxed">
+              {service.s_desc}
+            </p>
+            <div className="mt-4">
+              <a
+                href={service.s_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-blue-500 hover:text-blue-100 transition-colors duration-300"
+              >
+                <p>Read More</p> <span>&rarr;</span>
+              </a>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

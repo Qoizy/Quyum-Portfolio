@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import qlogo from "../../images/qlogo.png";
 import img3 from "../../images/img3.png";
@@ -11,14 +11,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    document.body.classList.toggle("menu-open", !isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
+    document.body.classList.toggle("overflow-hidden", !isMenuOpen);
   };
 
   const handleMenuItemClick = (menuItem) => {
     setMenu(menuItem);
     setIsMenuOpen(false);
-    document.body.classList.remove("menu-open");
+    document.body.classList.remove("overflow-hidden");
   };
 
   useEffect(() => {
@@ -53,39 +53,32 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="navbar" aria-label="Main navigation">
-      <img src={qlogo} alt="Q logo" className="nav-logo" />
+    <nav className="flex items-center justify-between px-4 py-3 sticky top-0 z-[1000] w-full">
+      <img src={qlogo} alt="Q logo" className="w-12 h-auto z-[1001]" />
 
-      {/* Hamburger Menu */}
-      <div className="hamburger">
-        <input
-          type="checkbox"
-          id="hamburger-input"
-          checked={isMenuOpen}
-          onChange={toggleMenu}
-          aria-expanded={isMenuOpen}
-          aria-label="Toggle menu"
-          className="hamburger-checkbox"
-        />
-        <label htmlFor="hamburger-input" className="hamburger-label">
-          <span className="hamburger-line line1"></span>
-          <span className="hamburger-line line2"></span>
-          <span className="hamburger-line line3"></span>
-        </label>
+      <div
+        className="md:hidden text-2xl z-[1100] flex cursor-pointer"
+        onClick={toggleMenu}
+      >
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       <ul
-        className={`nav-menu ${isMenuOpen ? "open" : ""}`}
-        role="menubar"
-        aria-hidden={!isMenuOpen}
+        className={`fixed md:static top-[70px] right-0 h-[calc(100%-70px)] w-full md:w-auto 
+          bg-white md:bg-transparent flex flex-col md:flex-row items-center gap-6 
+          md:gap-12 p-6 md:p-0 shadow-lg md:shadow-none transform transition-transform 
+          duration-300 ease-in-out z-[2000]
+          ${isMenuOpen ? "translate-x-0" : "translate-x-full"} 
+          md:translate-x-0`}
       >
         {["home", "about", "services", "work", "contact"].map((item) => (
           <li key={item} role="none">
             <AnchorLink
-              className="anchor-link"
+              className={`${
+                menu === item ? "text-blue-500" : "text-gray-900 md:text-white"
+              } hover:text-blue-500 transition`}
               offset={item === "home" ? 0 : 50}
               href={`#${item}`}
-              role="menuitem"
               onClick={() => handleMenuItemClick(item)}
             >
               <p>
@@ -99,7 +92,6 @@ const Navbar = () => {
                   ? "Portfolio"
                   : "Contact"}
               </p>
-              {/* {menu === item && <img src={img3} alt="" aria-hidden="true" />} */}
             </AnchorLink>
           </li>
         ))}

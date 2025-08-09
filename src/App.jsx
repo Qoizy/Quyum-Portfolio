@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/navbar";
 import Hero from "./Components/Hero/Hero";
@@ -24,6 +27,9 @@ const MainLayout = () => {
 };
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: false });
+  }, []);
   return (
     <Router>
       <Routes>

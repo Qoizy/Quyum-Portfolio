@@ -1,12 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import "./About.css";
-import img3 from "../../images/img3.png";
-import profile from "../../images/profile.jpeg";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import profile from "../../images/right-laptop.png";
 
-gsap.registerPlugin();
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   useGSAP(() => {
@@ -55,17 +53,29 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="about">
-      <div className="about-title">
-        <h1>About Me</h1>
-        {/* <img src={img3} alt="About Me" /> */}
+    <section
+      id="about"
+      className="flex flex-col items-center justify-center gap-20 px-4 md:px-12 lg:px-44"
+      data-aos="zoom-in-left"
+      data-aos-delay="500"
+    >
+      <div className="relative">
+        <h1 className="px-6 text-3xl md:text-4xl font-semibold text-blue-500">
+          Who Am I?
+        </h1>
       </div>
-      <div className="about-section">
-        <div className="about-left">
-          <img src={profile} alt="About Me" />
+
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+        <div className="hidden lg:block">
+          <img
+            src={profile}
+            alt="About Me"
+            className="rounded-[50px] w-[700px] h-[300px]"
+          />
         </div>
-        <div className="about-right">
-          <div className="about-para">
+
+        <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5 text-lg font-medium text-white leading-relaxed">
             <p>
               Results-driven Frontend Engineer skilled in building responsive,
               accessible, and high-performance web apps using React, Next.js,
@@ -75,47 +85,62 @@ const About = () => {
               scalable code that drives real business impact.
             </p>
           </div>
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>TypeScript</p>
-              <hr className="lines" style={{ width: "65%" }} />
-            </div>
-            <div className="about-skill">
-              <p>TailWind CSS</p>
-              <hr style={{ width: "45%" }} />
-            </div>
-            <div className="about-skill">
-              <p>JavaScript</p>
-              <hr style={{ width: "70%" }} />
-            </div>
-            <div className="about-skill">
-              <p>React JS</p>
-              <hr style={{ width: "65%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Vue JS</p>
-              <hr style={{ width: "60%" }} />
-            </div>
-            <div className="about-achievements">
-              <div className="about-achievement">
-                <h1>2+</h1>
-                <p>YEARS OF EXPERIENCE</p>
+
+          <div className="flex flex-col gap-5">
+            {[
+              { skill: "TypeScript", width: "w-[65%]" },
+              { skill: "JavaScript", width: "w-[70%]" },
+              { skill: "TailWind", width: "w-[65%]" },
+              { skill: "React", width: "w-[90%]" },
+              { skill: "VueJS", width: "w-[65%]" },
+              { skill: "NextJS", width: "w-[65%]" },
+            ].map(({ skill, width }) => (
+              <div
+                key={skill}
+                className="about-skill flex items-center gap-6 transition-transform duration-300 hover:scale-105"
+              >
+                <p className="min-w-[150px] text-lg font-medium">{skill}</p>
+                <hr
+                  className={`${width} h-2 rounded-full border-none outline-none bg-gradient-to-l from-blue-500 to-white`}
+                />
               </div>
-              <hr className="about-hr" />
-              <div className="about-achievement">
-                <h1>18+</h1>
-                <p>PROJECT COMPLETED</p>
-              </div>
-              <hr className="about-hr" />
-              <div className="about-achievement">
-                <h1>2+</h1>
-                <p>HAPPY CLIENT</p>
-              </div>
+            ))}
+
+            <div className="flex justify-around w-full mt-10">
+              {[
+                {
+                  num: "2+",
+                  label: "YEARS OF EXPERIENCE",
+                },
+                {
+                  num: "18+",
+                  label: "PROJECT COMPLETED",
+                },
+                {
+                  num: "5+",
+                  label: "HAPPY CLIENT",
+                },
+              ].map(({ num, label }, idx, arr) => (
+                <React.Fragment key={idx}>
+                  <div className="flex flex-col items-center gap-2 transition-transform duration-500 hover:scale-110">
+                    <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+                      {num}
+                    </h1>
+                    <p className="text-sm sm:text-base font-medium text-center">
+                      {label}
+                    </p>
+                  </div>
+
+                  {idx < arr.length - 1 && (
+                    <hr className="w-[5px] h-10 bg-gradient-to-l from-blue-500 to-white border-none rounded-full" />
+                  )}
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

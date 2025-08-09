@@ -17,27 +17,6 @@
   font-weight: 600;
   color: #3b82f6;
 }
-/* 
-.contact-title img {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-} */
-
-.left-leaf {
-  position: absolute;
-  left: 0;
-  /* width: ; */
-  bottom: -5rem;
-}
-
-.right-leaf {
-  position: absolute;
-  right: 0;
-  /* width: 6rem; */
-  top: 30%;
-}
 
 .contact-section {
   display: flex;

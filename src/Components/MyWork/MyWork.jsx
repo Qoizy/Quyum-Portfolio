@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./MyWork.css";
 import mywork_data from "../../images/mywork-data";
-import img3 from "../../images/img3.png";
-import arrow2 from "../../images/arrow2.png";
 
 const MyWork = () => {
   const [visibleproject, setVisibleProject] = useState(2);
@@ -22,26 +19,37 @@ const MyWork = () => {
   };
 
   return (
-    <div id="work" className="mywork">
-      <div className="mywork-title">
-        <h1>My Latest Work</h1>
-        {/* <img src={img3} alt="" /> */}
+    <section
+      id="work"
+      className="flex flex-col justify-center items-center gap-10 py-8 px-4 md:px-10"
+        data-aos="flip-down"
+        data-aos-delay="100"
+    >
+      <div className="relative">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">
+          My Projects
+        </h1>
       </div>
-      <div className="mywork-container">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-7xl">
         {mywork_data.slice(0, visibleproject).map((work, index) => {
           return (
-            <div key={index} className="mywork-project">
-              <div className="project-image-container">
+            <div
+              key={index}
+              className="text-center h-[100%] p-10 border border-blue-500 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300"
+            >
+              <div className="relative group">
                 <img
                   src={work.w_img}
                   alt={work.w_name}
-                  className="project-image"
+                  className="w-full h-[250px] md:h-[400px] rounded-2xl"
                 />
-                <div className="project-overlay">
-                  <h3>{work.w_name}</h3>
+                <div className="absolute top-0 left-0 w-full h-full bg-black/70 text-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
+                  <h3 className="flex flex-col text-xl md:text-lg mb-4">
+                    {work.w_name}
+                  </h3>
                   <button
                     onClick={() => openProjectDetails(work)}
-                    className="details-button"
+                    className="py-2 px-6 text-gray-900 bg-gradient-to-r from-slate-400 to-white hover:from-slate-500 hover:to-slate-200 rounded-xl transition"
                   >
                     Details
                   </button>
@@ -51,24 +59,24 @@ const MyWork = () => {
           );
         })}
       </div>
-      <div className="mywork-button">
+      <div className="mt-4">
         {visibleproject < mywork_data.length ? (
-          <button onClick={loadMoreProject} className="show-more">
+          <button
+            onClick={loadMoreProject}
+            className="inline-flex items-center border border-blue-500 rounded-xl py-2 px-4 text-lg md:text-xl font-semibold text-blue-500 hover:scale-110 transition"
+          >
             Show More
-            {/* <span className="tooltip-text">View More Project</span> */}
-            {/* &darr; */}
-            {/* <img src={arrow2} alt="Show More" /> */}
           </button>
         ) : (
-          <button onClick={showLessProject} className="show-less">
+          <button
+            onClick={showLessProject}
+            className="inline-flex items-center border border-blue-500 rounded-xl py-2 px-4 text-lg md:text-xl font-semibold text-blue-500 hover:scale-110 transition"
+          >
             Show Less
-            {/* <span className="tooltip-text">View Fewer Project</span> */}
-            {/* &uarr; */}
-            {/* <img src={arrow2} alt="Show More" /> */}
           </button>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
