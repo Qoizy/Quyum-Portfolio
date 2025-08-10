@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-0 px-10 md:px-10 py-0 text-white bg-[#00000050]">
+    <footer className="mt-0 px-10 md:px-10 py-0 text-white ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20 px-0 py-8 md:py-16">
         <div className="w-20 max-w-sm h-10">
           <img src={qlogo} alt="" />
@@ -24,7 +24,7 @@ const Footer = () => {
           <h3 className="text-2xl md:text-3xl mb-4 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[50px] after:h-[2px] after:bg-gradient-to-r after:from-blue-500 to-white pb-2">
             Social Link
           </h3>
-          <div className="flex gap-8 text-xl text-[#bccce0]">
+          <div className="flex gap-8 text-xl text-[#fff]">
             <div className="relative group">
               <a
                 href="https://github.com/Qoizy"

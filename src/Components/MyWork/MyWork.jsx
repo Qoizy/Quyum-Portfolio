@@ -22,8 +22,8 @@ const MyWork = () => {
     <section
       id="work"
       className="flex flex-col justify-center items-center gap-10 py-8 px-4 md:px-10"
-        data-aos="flip-down"
-        data-aos-delay="100"
+        // data-aos="flip-down"
+        // data-aos-delay="100"
     >
       <div className="relative">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">

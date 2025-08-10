@@ -6,8 +6,8 @@ const Services = () => {
     <section
       id="services"
       className="flex flex-col items-center justify-center gap-10 py-20 px-4 md:px-10"
-      data-aos="zoom-in-left"
-      data-aos-delay="300"
+      //   data-aos="zoom-in-left"
+      //   data-aos-delay="300"
     >
       <div className="relative">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">

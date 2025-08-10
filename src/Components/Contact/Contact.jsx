@@ -42,9 +42,9 @@ const Contact = () => {
     <section
       id="contact"
       className="flex flex-col gap-10 px-6 md:px-20 py-12 bg-slate-900 text-white"
-      data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="500"
+    //   data-aos="fade-down"
+    //   data-aos-easing="linear"
+    //   data-aos-duration="500"
     >
       {/* <div className="relative"> */}
       <h1 className="text-3xl md:text-4xl font-bold text-blue-500">
