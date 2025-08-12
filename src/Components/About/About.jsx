@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   useGSAP(() => {
-    gsap.fromTo(
-      ".about-para",
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        delay: 1,
-        stagger: 0.1,
-      }
-    );
+    // gsap.fromTo(
+    //   ".about-para",
+    //   {
+    //     opacity: 0,
+    //     y: 20,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     y: 0,
+    //     delay: 1,
+    //     stagger: 0.1,
+    //   }
+    // );
 
     gsap.from(".about-skill", {
       x: 250,

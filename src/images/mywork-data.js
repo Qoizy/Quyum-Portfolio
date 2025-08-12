@@ -32,7 +32,11 @@ const mywork_data = [
     w_description:
       "A Transport and Logistics Platform where user connect with trusted bus owner and find their perfect transportation solution. Also a dashboard where bus owner can track their earning and fleet movement and user can track their activities based on their travel history.",
     w_technologies: ["React", "JavaScript", "HTML", "CSS", "API", "Axios"],
-    w_features: [],
+    w_features: [
+      "An Admin dashboard to track all day-to-day transaction, manage all booking related issue.",
+      "A dashboard for bus owner to track their buses, and manage and track their earning.",
+      "A dashboard for the customers to also track their booking and spending.",
+    ],
   },
   {
     w_no: "03",
@@ -43,7 +47,7 @@ const mywork_data = [
     w_description:
       "A Landing Page that's all about taking care of pet and all.",
     w_technologies: ["React", "JavaScript", "TailWindCSS", "Framer"],
-    w_features: "",
+    w_features: ["No features....."],
   },
   {
     w_no: "05",
@@ -53,7 +57,7 @@ const mywork_data = [
     w_githubLink: "https://github.com/Qoizy/cafeu",
     w_description: "A CAFE landing page.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: [],
+    w_features: ["No features......"],
   },
   {
     w_no: "06",
@@ -81,7 +85,7 @@ const mywork_data = [
     w_description:
       "A landing page that shows how to brings simplicity into the furnishing market.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: "",
+    w_features: ["No features......."],
   },
   {
     w_no: "08",
@@ -91,7 +95,7 @@ const mywork_data = [
     w_githubLink: "https://github.com/Qoizy/halsa",
     w_description: "Your Health Center all in one app.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: "",
+    w_features: ["No features......."],
   },
 ];
 

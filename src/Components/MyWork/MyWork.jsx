@@ -22,8 +22,8 @@ const MyWork = () => {
     <section
       id="work"
       className="flex flex-col justify-center items-center gap-10 py-8 px-4 md:px-10"
-        // data-aos="flip-down"
-        // data-aos-delay="100"
+      // data-aos="flip-down"
+      // data-aos-delay="100"
     >
       <div className="relative">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">
@@ -43,7 +43,7 @@ const MyWork = () => {
                   alt={work.w_name}
                   className="w-full h-[250px] md:h-[400px] rounded-2xl"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black/70 text-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
+                <div className="absolute top-0 left-0 w-full h-full bg-black/70 text-white rounded-2xl md:opacity-0 opacity-1 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
                   <h3 className="flex flex-col text-xl md:text-lg mb-4">
                     {work.w_name}
                   </h3>

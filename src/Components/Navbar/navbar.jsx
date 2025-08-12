@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import qlogo from "../../images/qlogo.png";
-import img3 from "../../images/img3.png";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/all";
 
@@ -19,6 +18,26 @@ const Navbar = () => {
     setMenu(menuItem);
     setIsMenuOpen(false);
     document.body.classList.remove("overflow-hidden");
+
+    // setTimeout(() => {
+    //   const target = document.getElementById(menuItem);
+    //   if (target) {
+    //     window.scrollTo({
+    //       top: target.offsetTop - (window.innerWidth <= 768 ? 100 : 50),
+    //       behavior: "smooth",
+    //     });
+    //   }
+    // }, 100);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - (window.innerWidth <= 768 ? 100 : 50),
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -53,21 +72,21 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="flex items-center justify-between px-4 py-3 sticky top-0 z-[1000] w-full">
-      <img src={qlogo} alt="Q logo" className="w-12 h-auto z-[1001]" />
+    <nav className="flex items-center justify-between px-4 py-3 sticky top-0 z-[50] bg-transparent w-full">
+      <img src={qlogo} alt="Q logo" className="w-12 h-auto z-[50]" />
 
       <div
-        className="md:hidden text-2xl z-[1100] flex cursor-pointer"
+        className="md:hidden text-2xl z-[50] flex cursor-pointer"
         onClick={toggleMenu}
       >
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       <ul
-        className={`fixed md:static top-[70px] right-0 h-[calc(100%-70px)] w-full md:w-auto 
+        className={`fixed md:static top-[70px] right-0  w-full md:w-auto 
           bg-white md:bg-transparent flex flex-col md:flex-row items-center gap-6 
           md:gap-12 p-6 md:p-0 shadow-lg md:shadow-none transform transition-transform 
-          duration-300 ease-in-out z-[2000]
+          duration-300 ease-in-out z-[40]
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"} 
           md:translate-x-0`}
       >
@@ -76,10 +95,13 @@ const Navbar = () => {
             <AnchorLink
               className={`${
                 menu === item ? "text-blue-500" : "text-gray-900 md:text-white"
-              } hover:text-blue-500 transition`}
-              offset={item === "home" ? 0 : 50}
+              } hover:text-blue-500 transition text-xl md:text-base block px-0 md:px-0 lg:px-4 py-2 md:py-0`}
+              offset={() => (window.innerWidth <= 768 ? 100 : 50)}
               href={`#${item}`}
-              onClick={() => handleMenuItemClick(item)}
+              onClick={() => {
+                handleMenuItemClick(item);
+                scrollToSection(item);
+              }}
             >
               <p>
                 {item === "home"

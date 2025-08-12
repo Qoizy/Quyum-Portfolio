@@ -11,7 +11,7 @@ const Services = () => {
     >
       <div className="relative">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500">
-          My Services
+         What I do........
         </h1>
       </div>
 

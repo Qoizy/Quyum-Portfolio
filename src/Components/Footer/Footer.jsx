@@ -1,5 +1,7 @@
 import React from "react";
 import qlogo from "../../images/qlogo.png";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +18,7 @@ const Footer = () => {
             About
           </h3>
           <p className="text-white text-xl md:text-xl">
-            An Aspiring Full-stack Software Engineer.
+            A Full-stack Software Engineer.
           </p>
         </div>
 
@@ -67,13 +69,13 @@ const Footer = () => {
             </div>
             <div className="relative group">
               <a
-                href=""
+                href="https://x.com/_officialhorla"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
                 className="transition-transform hover:scale-110 duration-300"
               >
-                <i class="fa-brands fa-x-twitter"></i>
+                <FaXTwitter className="mt-1 " />
               </a>
               <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-[0f172a] text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 X
@@ -82,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mb-6 pt-6 pb-4 text-center border-t-2 border-gray-500">
+      <div className="mb-2 pt-6 pb-4 text-center border-t-2 border-gray-500">
         <p className="text-white text-sm md:text-xl">
           &copy; Quyum {currentYear} Portfolio. All rights reserved.
         </p>
