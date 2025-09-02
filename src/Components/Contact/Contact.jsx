@@ -3,6 +3,8 @@ import React from "react";
 import email from "../../images/email.png";
 import call from "../../images/call.png";
 import location from "../../images/location.png";
+import AnimatedWrapper from "../AnimatedWrapper";
+import { zoomInLeft } from "../../images/animation";
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -39,82 +41,87 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="flex flex-col gap-10 px-6 md:px-20 py-12 bg-slate-900 text-white"
-    //   data-aos="fade-down"
-    //   data-aos-easing="linear"
-    //   data-aos-duration="500"
-    >
-      {/* <div className="relative"> */}
-      <h1 className="text-3xl md:text-4xl font-bold text-blue-500">
-        Get in touch
-      </h1>
-      {/* </div> */}
-      <div className="flex flex-col md:flex-row gap-10">
-        <div className="flex flex-col flex-1 gap-6">
-          <h1 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
-            Let's talk
-          </h1>
-          <p className="text-sm sm:text-base text-gray-300">
-            I'm currently available to take on any project.
-          </p>
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <img src={email} alt="email" className="w-6 h-6" />
-              <p>oladimejiquyum30@gmail.com</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src={call} alt="call" className="w-6 h-6" />
-              <p>+234 905 707 2013</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src={location} alt="location" className="w-6 h-6" />
-              <p>Lagos, Nigeria</p>
+    // <AnimatedWrapper variant={zoomInLeft} delay={0.3}>
+      <section
+        id="contact"
+        className="flex flex-col gap-10 px-6 md:px-20 py-12 bg-slate-900 text-white"
+        //   data-aos="fade-down"
+        //   data-aos-easing="linear"
+        //   data-aos-duration="500"
+      >
+        {/* <div className="relative"> */}
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-500">
+          Get in touch
+        </h1>
+        {/* </div> */}
+        <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col flex-1 gap-6">
+            <h1 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+              Let's talk
+            </h1>
+            <p className="text-sm sm:text-base text-gray-300">
+              I'm currently available to take on any project.
+            </p>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <img src={email} alt="email" className="w-6 h-6" />
+                <p>oladimejiquyum30@gmail.com</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={call} alt="call" className="w-6 h-6" />
+                <p>+234 905 707 2013</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={location} alt="location" className="w-6 h-6" />
+                <p>Lagos, Nigeria</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <form onSubmit={onSubmit} className="flex-1 flex flex-col gap-4 w-full">
-          <label htmlFor="" className="text-sm font-semibold">
-            Your Name
-          </label>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            name="name"
-            className="p-3 rounded bg-slate-700 text-white focus:outline-none"
-            required
-          />
-          <label htmlFor="" className="text-sm font-semibold">
-            Your Email
-          </label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            name="email"
-            className="p-3 rounded bg-slate-700 text-white focus:outline-none"
-            required
-          />
-          <label htmlFor="" className="text-sm font-semibold">
-            Write your message here
-          </label>
-          <textarea
-            name="message"
-            rows="8"
-            placeholder="Enter your message"
-            className="p-3 rounded bg-slate-700 text-white focus:outline-none"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full mt-4 self-start"
+          <form
+            onSubmit={onSubmit}
+            className="flex-1 flex flex-col gap-4 w-full"
           >
-            Submit
-          </button>
-        </form>
-      </div>
-    </section>
+            <label htmlFor="" className="text-sm font-semibold">
+              Your Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              className="p-3 rounded bg-slate-700 text-white focus:outline-none"
+              required
+            />
+            <label htmlFor="" className="text-sm font-semibold">
+              Your Email
+            </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              className="p-3 rounded bg-slate-700 text-white focus:outline-none"
+              required
+            />
+            <label htmlFor="" className="text-sm font-semibold">
+              Write your message here
+            </label>
+            <textarea
+              name="message"
+              rows="8"
+              placeholder="Enter your message"
+              className="p-3 rounded bg-slate-700 text-white focus:outline-none"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full mt-4 self-start"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+    // </AnimatedWrapper>
   );
 };
 
