@@ -106,7 +106,7 @@ const Hero = () => {
               Connect with me
             </AnchorLink>
             <a
-              href="../../images/Quyum-Resume.pdf"
+              href="../../images/OLADIMEJI QUYUM RESUME.pdf"
               download="Quyum_oladimeji_Resume.pdf"
               className="px-5 py-2 rounded-full border border-white text-white font-bold hover:border-blue-500 hover:text-blue-500 transition"
             >
