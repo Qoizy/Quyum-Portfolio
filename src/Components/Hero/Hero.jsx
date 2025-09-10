@@ -106,8 +106,9 @@ const Hero = () => {
               Connect with me
             </AnchorLink>
             <a
-              href="../../images/OLADIMEJI QUYUM RESUME.pdf"
+              href="https://356153522454245376.hello.cv"
               download="Quyum_oladimeji_Resume.pdf"
+              target="_blank"
               className="px-5 py-2 rounded-full border border-white text-white font-bold hover:border-blue-500 hover:text-blue-500 transition"
             >
               My resume
