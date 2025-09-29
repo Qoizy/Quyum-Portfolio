@@ -5,6 +5,7 @@ import project4_img from "../images/project4.png";
 import project5_img from "../images/project5.png";
 import project6_img from "../images/project6.png";
 import project7_img from "../images/project7.png";
+import project8_img from "../images/project8.png";
 
 const mywork_data = [
   {
@@ -25,6 +26,26 @@ const mywork_data = [
   },
   {
     w_no: "02",
+    w_name: "Task Manager",
+    w_img: project8_img,
+    w_link: "https://mini-task-manager-phi.vercel.app/",
+    w_githubLink: "https://github.com/Qoizy/mini-task-manager",
+    w_description:
+      "A mini task manager for planning and tracking your day-to-day activities.",
+    w_technologies: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "TailWindCSS",
+      "API",
+      "Axios",
+      "MongoDB",
+      "Express.js",
+    ],
+    w_features: ["Null..."],
+  },
+  {
+    w_no: "03",
     w_name: "ValueRide",
     w_img: project4_img,
     w_link: "https://valueride.vercel.app/",
@@ -39,7 +60,7 @@ const mywork_data = [
     ],
   },
   {
-    w_no: "03",
+    w_no: "04",
     w_name: "Happy Pet",
     w_img: project5_img,
     w_link: "https://happy-pet-lime.vercel.app/",
@@ -47,7 +68,7 @@ const mywork_data = [
     w_description:
       "A Landing Page that's all about taking care of pet and all.",
     w_technologies: ["React", "JavaScript", "TailWindCSS", "Framer"],
-    w_features: ["No features....."],
+    w_features: ["Null...."],
   },
   {
     w_no: "05",
@@ -57,7 +78,7 @@ const mywork_data = [
     w_githubLink: "https://github.com/Qoizy/cafeu",
     w_description: "A CAFE landing page.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: ["No features......"],
+    w_features: ["Null......"],
   },
   {
     w_no: "06",
@@ -85,7 +106,7 @@ const mywork_data = [
     w_description:
       "A landing page that shows how to brings simplicity into the furnishing market.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: ["No features......."],
+    w_features: ["Null...."],
   },
   {
     w_no: "08",
@@ -95,7 +116,7 @@ const mywork_data = [
     w_githubLink: "https://github.com/Qoizy/halsa",
     w_description: "Your Health Center all in one app.",
     w_technologies: ["React", "JavaScript", "TailWindCSS"],
-    w_features: ["No features......."],
+    w_features: ["Null...."],
   },
 ];
 
