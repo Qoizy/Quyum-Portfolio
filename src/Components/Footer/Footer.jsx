@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="mt-0 px-10 md:px-10 py-0 text-white ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20 px-0 py-8 md:py-16">
-        <div className="w-20 max-w-sm h-10">
+        <div className="w-20 max-w-sm h-10 hidden md:block">
           <img src={qlogo} alt="" />
         </div>
 
