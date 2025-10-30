@@ -60,8 +60,8 @@ const About = () => {
             <h1 className="text-3xl md:text-4xl text-center font-semibold text-blue-500 mb-6">
               Who Am I?
             </h1>
-            <p className="text-2xl leading-relaxed text-white">
-              Versatile Full Stack Engineer with a strong foundation in both
+            <p className="text-2xl leading-relaxed text-white text-shadow-blue">
+              A Versatile Full Stack Engineer with a strong foundation in both
               frontend and backend development, skilled in React, Next.js,
               Vue.js, TypeScript, and Node.js. Proven track record of enhancing
               user experiences, evidenced by a 45% reduction in bounce rate and

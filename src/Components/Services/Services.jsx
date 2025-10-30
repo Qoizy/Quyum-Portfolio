@@ -22,15 +22,17 @@ const Services = () => {
           {services_Data.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col gap-4 border border-blue-500 rounded-2xl p-8 hover:scale-105 transition-transform duration-300"
+              className="relative flex flex-col gap-4 border border-blue-500 rounded-2xl p-8 bg-white/10 backdrop-blur-md shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-300/10 to-transparent pointer-events-none" />
+
+              <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-200 to-white bg-clip-text text-transparent">
                 {service.s_no}
               </h3>
-              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-blue-200 to-white bg-clip-text text-transparent">
                 {service.s_name}
               </h2>
-              <p className="text-sm md:text-base text-white leading-relaxed">
+              <p className="font-semibold text-sm md:text-base text-blue-500 leading-relaxed">
                 {service.s_desc}
               </p>
               <div className="mt-4">
