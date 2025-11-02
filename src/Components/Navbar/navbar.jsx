@@ -94,7 +94,7 @@ const Navbar = () => {
           <li key={item} role="none">
             <AnchorLink
               className={`${
-                menu === item ? "text-blue-500" : "text-gray-900 md:text-white"
+                menu === item ? "text-blue-800" : "text-gray-900 md:text-white"
               } hover:text-blue-500 transition text-xl md:text-base block px-0 md:px-0 lg:px-4 py-2 md:py-0`}
               offset={() => (window.innerWidth <= 768 ? 100 : 50)}
               href={`#${item}`}
