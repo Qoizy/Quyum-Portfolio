@@ -10,6 +10,7 @@ import tsLogo from "../../images/typescript.png";
 import gitLogo from "../../images/git.svg";
 import tailwindLogo from "../../images/tailwind.svg";
 import figmaLogo from "../../images/figma.png";
+import supabaseLogo from "../../images/supabase.png";
 import AnimatedWrapper from "../AnimatedWrapper";
 import {
   fadeDown,
@@ -19,17 +20,18 @@ import {
 } from "../../images/animation";
 
 const skills = [
-  { name: "HTML", logo: htmlLogo },
-  { name: "CSS", logo: cssLogo },
-  { name: "JavaScript", logo: jsLogo },
   { name: "React", logo: reactLogo },
   { name: "NextJs", logo: nextLogo },
+  { name: "HTML", logo: htmlLogo },
+  { name: "Tailwind", logo: tailwindLogo },
+  { name: "CSS", logo: cssLogo },
+  { name: "JavaScript", logo: jsLogo },
   { name: "NodeJs", logo: nodeLogo },
   { name: "TypeScript", logo: tsLogo },
-  { name: "Tailwind", logo: tailwindLogo },
   { name: "Figma", logo: figmaLogo },
   { name: "Git", logo: gitLogo },
   { name: "GitHub", logo: githubLogo },
+  { name: "Supabase", logo: supabaseLogo },
 ];
 
 const About = () => {
@@ -60,16 +62,19 @@ const About = () => {
             <h1 className="text-3xl md:text-4xl text-center font-semibold text-blue-500 mb-6">
               Who Am I?
             </h1>
-            <p className="text-2xl leading-relaxed text-white text-shadow-blue">
-              A Versatile Full Stack Engineer with a strong foundation in both
-              frontend and backend development, skilled in React, Next.js,
-              Vue.js, TypeScript, and Node.js. Proven track record of enhancing
-              user experiences, evidenced by a 45% reduction in bounce rate and
-              a 50% decrease in page load times. Experienced in building
-              scalable, high-performance applications in Agile environments,
-              aiming to leverage comprehensive development skills to drive
-              impactful solutions and business growth.
-            </p>
+            <div className="bg-white/5 backdrop-blur shadow-lg p-4 rounded-xl">
+              <p className="text-2xl leading-relaxed text-white text-shadow-blue">
+                A Versatile Full Stack Engineer with a strong foundation in both
+                frontend and backend development, skilled in React, Next.js,
+                JavaScript, TypeScript, Express.js, MongoDB, and Node.js. Proven
+                track record of enhancing user experiences, evidenced by a 45%
+                reduction in bounce rate and a 50% decrease in page load times.
+                Experienced in building scalable, high-performance applications
+                in Agile environments, aiming to leverage comprehensive
+                development skills to drive impactful solutions and business
+                growth.
+              </p>
+            </div>
           </div>
         </div>
       </section>

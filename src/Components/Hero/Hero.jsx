@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profile from "../../images/profile2.jpeg";
+import profile from "../../images/pro-headshot.png";
 import leftleaf from "../../images/hero-left-leaf.png";
 import rightleaf from "../../images/hero-right-leaf.png";
 import { useGSAP } from "@gsap/react";
