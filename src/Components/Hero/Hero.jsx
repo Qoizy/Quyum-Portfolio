@@ -54,7 +54,7 @@ const Hero = () => {
           />
         </div>
 
-        <img
+        {/* <img
           src={leftleaf}
           alt="left leaf"
           className="left-leaf absolute left-0 bottom-[-5rem] hidden lg:block"
@@ -63,17 +63,17 @@ const Hero = () => {
           src={rightleaf}
           alt="right leaf"
           className="right-leaf absolute right-0 top-1/3 hidden lg:block"
-        />
+        /> */}
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2 space-y-6">
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-700">
-            Hi, I'm Quyum Oladimeji
+            Hi, <span className="text-blue-500">I'm Quyum Oladimeji</span>
           </h3>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-blue-500">
             A FullStack Engineer, Frontend Specialist
           </h2>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl py-6 font-bold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl py-6 font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

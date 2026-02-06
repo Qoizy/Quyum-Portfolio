@@ -19,22 +19,21 @@ const Navbar = () => {
     setIsMenuOpen(false);
     document.body.classList.remove("overflow-hidden");
 
-    // setTimeout(() => {
-    //   const target = document.getElementById(menuItem);
-    //   if (target) {
-    //     window.scrollTo({
-    //       top: target.offsetTop - (window.innerWidth <= 768 ? 100 : 50),
-    //       behavior: "smooth",
-    //     });
-    //   }
-    // }, 100);
+    setTimeout(() => {
+      scrollToSection(menuItem);
+    }, 10);
   };
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
+      const headerOffset = window.innerWidth <= 768 ? 80 : 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
       window.scrollTo({
-        top: element.offsetTop - (window.innerWidth <= 768 ? 100 : 50),
+        top: offsetPosition,
         behavior: "smooth",
       });
     }
@@ -96,11 +95,10 @@ const Navbar = () => {
               className={`${
                 menu === item ? "text-blue-800" : "text-gray-900 md:text-white"
               } hover:text-blue-500 transition text-xl md:text-base block px-0 md:px-0 lg:px-4 py-2 md:py-0`}
-              offset={() => (window.innerWidth <= 768 ? 100 : 50)}
               href={`#${item}`}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 handleMenuItemClick(item);
-                scrollToSection(item);
               }}
             >
               <p>

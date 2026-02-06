@@ -44,43 +44,38 @@ const Contact = () => {
     // <AnimatedWrapper variant={zoomInLeft} delay={0.3}>
     <section
       id="contact"
-      className="flex flex-col gap-10 px-6 md:px-20 py-12 bg-slate-900 text-white"
+      className="flex flex-col gap-10 px-6 md:px-10 py-12 bg-slate-900 text-white"
       //   data-aos="fade-down"
       //   data-aos-easing="linear"
       //   data-aos-duration="500"
     >
       {/* <div className="relative"> */}
       <h1 className="text-3xl md:text-4xl font-bold text-blue-500">
-        Get in touch
+        Let's Build Something Together
       </h1>
       {/* </div> */}
       <div className="flex flex-col md:flex-row gap-10">
         <div className="flex flex-col flex-1 gap-6">
-          <h1 className="text-2xl md:text-3xl font-semibold bg-gradient-to-l from-blue-500 to-white bg-clip-text text-transparent">
-            Let's talk
-          </h1>
-          <p className="text-sm sm:text-base text-gray-300">
-            I'm currently available to take on any project.
+          <p className="text-xl text-gray-300 mb-6">
+            Feel free to reach out if you're looking for a developer, <br />{" "}
+            have a question, or just want to connect.{" "}
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-xl">
             <div className="flex items-center gap-4">
               <img src={email} alt="email" className="w-6 h-6" />
-              <p>oladimejiquyum30@gmail.com</p>
-            </div>
-            {/* <div className="flex items-center gap-4">
-                <img src={call} alt="call" className="w-6 h-6" />
-                <p>+234 905 707 2013</p>
-              </div> */}
-            <div className="flex items-center gap-4">
-              <img src={location} alt="location" className="w-6 h-6" />
-              <p>Lagos, Nigeria</p>
+              <a
+                href="mailto:oladimejiquyum30@gmail.com"
+                className="hover:text-blue-500 hover:underline transition-colors text-left"
+              >
+                oladimejiquyum30@gmail.com
+              </a>
             </div>
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="flex-1 flex flex-col gap-4 w-full">
-          <label htmlFor="" className="text-sm font-semibold">
-            Your Name
+        <form onSubmit={onSubmit} className="flex-1 flex flex-col gap-3 w-full">
+          <label htmlFor="" className="text-xl font-semibold">
+            Name
           </label>
           <input
             type="text"
@@ -89,8 +84,8 @@ const Contact = () => {
             className="p-3 rounded bg-slate-700 text-white focus:outline-none"
             required
           />
-          <label htmlFor="" className="text-sm font-semibold">
-            Your Email
+          <label htmlFor="" className="text-xl font-semibold">
+            Email
           </label>
           <input
             type="email"
@@ -99,7 +94,7 @@ const Contact = () => {
             className="p-3 rounded bg-slate-700 text-white focus:outline-none"
             required
           />
-          <label htmlFor="" className="text-sm font-semibold">
+          <label htmlFor="" className="text-xl font-semibold">
             Write your message here
           </label>
           <textarea

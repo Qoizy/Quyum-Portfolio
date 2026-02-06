@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,6 +11,7 @@ import MyWork from "./Components/MyWork/MyWork";
 import ProjectDetails from "./Components/ProjectDetails/ProjectDetails";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import SplashLoading from "./Components/SplashLoading";
 
 const MainLayout = () => {
   return (
@@ -27,16 +28,38 @@ const MainLayout = () => {
 };
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     AOS.init({ duration: 800, once: false });
+
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (hasVisited) {
+      setIsLoading(false);
+    } else {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        sessionStorage.setItem("hasVisited", "true");
+      }, 2500);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
+
+  if (isLoading) {
+    return <SplashLoading />;
+  }
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<MainLayout />} />
+      <div className="animate-in fade-in duration-500">
+        <Routes>
+          <Route path="/" element={<MainLayout />} />
 
-        <Route path="/project/:id" element={<ProjectDetails />} />
-      </Routes>
+          <Route path="/project/:id" element={<ProjectDetails />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

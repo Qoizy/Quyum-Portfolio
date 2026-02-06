@@ -45,12 +45,18 @@ const MyWork = () => {
     <AnimatedWrapper variant={fadeDown} delay={0.3}>
       <section
         id="work"
-        className="flex flex-col justify-center items-center gap-10 py-8 px-4 md:px-10 mb-10"
+        className=" max-w-7xl mx-auto flex flex-col justify-center items-center gap-10 py-8 px-4 md:px-10 mb-10"
       >
-        <div className="w-full max-w-7xl flex justify-center relative">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500 text-center mb-5">
+        <div className="w-full flex flex-col justify-center relative">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-500 mb-5">
             My Projects
           </h1>
+
+          <p className="text-black text-center text-base md:text-xl leading-relaxed">
+            I like to stay busy and always have a project in the works.{" "}
+            <br className="hidden md:block" /> Take a look at some of the web
+            applications I've dedicated my time to.
+          </p>
 
           <div className="absolute right-0 top-5 flex gap-3">
             <button
@@ -85,23 +91,34 @@ const MyWork = () => {
           {mywork_data.map((work, index) => (
             <div
               key={index}
-              className="project-card w-[100%] md:w-[calc(50%-1rem)] flex-shrink-0 text-center border border-blue-500 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300"
+              className="project-card w-[100%] md:w-[calc(50%-1rem)] flex-shrink-0 text-left rounded-2xl overflow-hidden"
             >
-              <div className="relative group">
+              <div
+                className="p-3 md:p-6 rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-1"
+                onClick={() => openProjectDetails(work)}
+              >
                 <img
                   src={work.w_img}
                   alt={work.w_name}
-                  className="w-full h-[250px] md:h-[400px] rounded-2xl"
+                  className="w-full h-[250px] md:h-[400px] rounded-2xl hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black/70 text-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
-                  <h3 className="text-xl md:text-lg mb-4">{work.w_name}</h3>
-                  <button
-                    onClick={() => openProjectDetails(work)}
-                    className="py-2 px-6 text-gray-900 bg-gradient-to-r from-slate-400 to-white hover:from-slate-500 hover:to-slate-200 rounded-xl transition"
-                  >
-                    Details
-                  </button>
-                </div>
+              </div>
+
+              <div className="flex flex-col items-start gap-3 mt-6 px-4">
+                <h3 className="text-3xl font-bold text-blue-500">
+                  {work.w_name}
+                </h3>
+
+                <p className="text-black max-w-md text-base md:text-xl leading-relaxed">
+                  {work.w_description}
+                </p>
+
+                <button
+                  onClick={() => openProjectDetails(work)}
+                  className="mt-3 text-sm font-extrabold text-black uppercase flex items-center gap-2 hover:gap-3 transition-all"
+                >
+                  VIEW PROJECT <FaArrowRight className="text-xs" />
+                </button>
               </div>
             </div>
           ))}
